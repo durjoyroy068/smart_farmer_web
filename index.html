@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Farmer - Empowering Agriculture</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="Smart Farmer" class="logo-img" />
+          <span class="logo-text">Smart Farmer</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/marketplace.html">Buy & Sell</a></li>
+          <li><a href="pages/medicine.html">Medicine</a></li>
+          <li><a href="pages/agri-info.html">Agri Info</a></li>
+          <li><a href="pages/profile.html">Profile</a></li>
+        </ul>
+        <div class="auth-buttons" id="auth-buttons">
+          <a href="pages/login.html" class="btn btn-secondary">Login</a>
+          <a href="pages/register.html" class="btn btn-primary">Sign Up</a>
+        </div>
+        <div class="user-info hidden" id="user-info">
+          <span id="username">Welcome, User!</span>
+          <a href="#" class="btn btn-secondary" onclick="logout()">Logout</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home Page -->
+      <div id="home" class="page active-page">
+        <section class="hero">
+          <div class="container">
+            <h1 >Welcome to Smart Farmer</h1>
+            <p>
+              Empowering farmers with technology and knowledge for better
+              agriculture
+            </p>
+            <a href="pages/marketplace.html" class="btn btn-primary"
+              >Explore Marketplace</a
+            >
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="features">
+            <div class="feature-card">
+              <div class="feature-icon">🛒</div>
+              <h3>Buy & Sell</h3>
+              <p>
+                Connect with buyers and sellers. Trade agricultural products
+                directly with other farmers and suppliers.
+              </p>
+              <a href="pages/marketplace.html" class="btn btn-primary"
+                >Visit Marketplace</a
+              >
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">💊</div>
+              <h3>Agricultural Medicine</h3>
+              <p>
+                Find the right fertilizers, pesticides, and agricultural
+                medicines for your crops.
+              </p>
+              <a href="pages/medicine.html" class="btn btn-primary"
+                >Browse Medicine</a
+              >
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>Agricultural Information</h3>
+              <p>
+                Access expert advice, weather updates, and farming tips to
+                improve your yield.
+              </p>
+              <a href="pages/agri-info.html" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Welcome Popup Modal -->
+    <div id="welcome-popup" class="welcome-popup-overlay hidden">
+      <div class="welcome-popup">
+        <div class="welcome-popup-content">
+          <div class="welcome-icon">🎉</div>
+          <h2>Welcome Back!</h2>
+          <p id="welcome-message">
+            Hello, <span id="welcome-username"></span>!
+          </p>
+          <p class="welcome-subtitle">
+            You have successfully logged in to Smart Farmer
+          </p>
+          <button class="btn btn-primary" onclick="closeWelcomePopup()">
+            Continue to Dashboard
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="logo.png" alt="Smart Farmer" class="logo-img" />
+              <span class="logo-text">Smart Farmer</span>
+            </a>
+            <p class="footer-desc">
+              Empowering farmers with technology, marketplace access, and
+              reliable information for better yields and income.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages/marketplace.html">Buy & Sell</a></li>
+              <li><a href="pages/medicine.html">Medicine</a></li>
+              <li><a href="pages/agri-info.html">Agri Info</a></li>
+              <li><a href="pages/profile.html">Profile</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">How to Sell</a></li>
+              <li><a href="#">Buyer Safety</a></li>
+              <li><a href="#">Terms & Privacy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="mailto:support@smartfarmer.com"
+                  >support@smartfarmer.com</a
+                >
+              </li>
+              <li><a href="tel:+8801800000000">01872011264</a></li>
+              <li>Gazipur, Dhaka, Bangladesh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p> Smart Farmer made by Durjoy, Noyon and Saiful.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Welcome Popup -->
+    <div id="welcome-popup" class="welcome-popup-overlay hidden">
+      <div class="welcome-popup">
+        <div class="welcome-popup-content">
+          <div class="welcome-icon">🎉</div>
+          <h2>Welcome Back!</h2>
+          <div id="welcome-message">
+            Hello <span id="welcome-username">User</span>,
+          </div>
+          <div class="welcome-subtitle">we're glad to see you again!</div>
+          <button onclick="closeWelcomePopup()" class="btn">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+  </body>
+</html>
